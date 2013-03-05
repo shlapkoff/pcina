@@ -1,7 +1,5 @@
-// АВМиС, лабораторная #1
-// Опрос PCI устройств
 // Solodky, Shlapkov / 050502
-// ms@d0s.org / Mar 2013
+// Mar 2013
 #include "hexioctrl.h"
 #include "pci_codes.h"
 #include <stdio.h>
@@ -31,7 +29,6 @@ typedef struct _PCI_CONFIG_ADDRESS {
 } PCI_CONFIG_ADDRESS;
 #pragma pack()
 
-// поиск данных о PCI устройстве в pci_codes.h и вывод в файл
 void putDeviceInfo(FILE * file, ULONG devId, ULONG venId, ULONG subVenId, ULONG baseClass, ULONG subClass, ULONG prog){
 	// echo class
 	for(int i = 0; i < PCI_CLASSCODETABLE_LEN; i++){
